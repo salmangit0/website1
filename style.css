@@ -1,11 +1,11 @@
 /* Global Reset and Variables */
 :root {
-    --primary: #111111;
-    --secondary: #666666;
-    --background: #fcfcfc;
-    --surface: #ffffff;
-    --border: #e5e5e5;
-    --accent: #e63946;
+    --primary: #f0f0f0;          /* High contrast text colour */
+    --secondary: #a0a0a0;        /* Muted supporting text colour */
+    --background: #121212;       /* Ultra-dark workspace background base */
+    --surface: #1e1e1e;          /* Elevated surface layers for cards/navbars */
+    --border: #2d2d2d;           /* Subtle dark dividing borders */
+    --accent: #ff4d5a;           /* Vibrantly tuned accent crimson tint */
     --font: 'Inter', sans-serif;
 }
 
@@ -74,13 +74,14 @@ body {
 .cart-svg {
     width: 24px;
     height: 24px;
+    stroke: var(--primary); /* Keeps checkout bag path visible against dark backgrounds */
 }
 
 #cart-count {
     position: absolute;
     top: -8px;
     right: -10px;
-    background-color: var(--primary);
+    background-color: var(--accent); /* High contrast accent callout badge */
     color: white;
     font-size: 0.75rem;
     font-weight: bold;
@@ -121,17 +122,17 @@ body {
 
 .product-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5); /* Enhanced depth projection shadow for deep workspace look */
 }
 
 .product-image-placeholder {
     width: 100%;
     height: 250px;
-    background-color: #f0f0f0;
+    background-color: #2a2a2a; /* Muted internal tile segment space for images */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #aaa;
+    color: #666;
     font-weight: 300;
     margin-bottom: 1rem;
     border-radius: 2px;
@@ -152,16 +153,16 @@ body {
 .add-to-cart-btn {
     width: 100%;
     background-color: var(--primary);
-    color: white;
+    color: var(--background); /* Inverts button text for readability */
     border: none;
     padding: 0.75rem;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
     transition: background 0.2s ease;
 }
 
 .add-to-cart-btn:hover {
-    background-color: #333333;
+    background-color: #ffffff;
 }
 
 /* Sidebar Floating Shopping Cart Drawer */
@@ -173,7 +174,7 @@ body {
     max-width: 100%;
     height: 100%;
     background-color: var(--surface);
-    box-shadow: -5px 0 15px rgba(0,0,0,0.05);
+    box-shadow: -5px 0 25px rgba(0,0,0,0.5);
     z-index: 200;
     display: flex;
     flex-direction: column;
@@ -196,6 +197,7 @@ body {
     background: none;
     border: none;
     font-size: 2rem;
+    color: var(--primary);
     cursor: pointer;
 }
 
@@ -235,7 +237,7 @@ body {
 .cart-footer {
     padding: 1.5rem;
     border-top: 1px solid var(--border);
-    background-color: #fafafa;
+    background-color: #181818; /* Darkened background panel for calculation calculations summary */
 }
 
 .subtotal {
@@ -248,12 +250,17 @@ body {
 
 .checkout-btn {
     width: 100%;
-    background-color: var(--primary);
+    background-color: var(--accent); /* Uses accented theme accent highlighting action call to actions */
     color: white;
     border: none;
     padding: 1rem;
     font-weight: 600;
     cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #ff3342;
 }
 
 /* Background overlay mask layer */
@@ -263,7 +270,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.6); /* Darkened overlay shadow shroud mask */
     z-index: 150;
     display: none;
 }
