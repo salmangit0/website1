@@ -3,27 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalist Shop</title>
-    <!-- Google Fonts for clean typography -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>VibeTrend | Viral Gadgets & Lifestyle</title>
+    <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com" rel="stylesheet">
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Dropshipping Scarcity Ticker Banner -->
+    <div class="promo-banner">
+        ⚡ FLASH SALE: 50% OFF ALL TRENDING ITEMS TODAY ONLY — <span id="countdown">00:14:59</span> LEFT!
+    </div>
+
     <!-- Header Section -->
     <header class="navbar">
         <div class="logo">
-            <a href="#">MINIMAL<span>SHOP</span></a>
+            <a href="#">VIBE<span>TREND</span></a>
         </div>
         <nav class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">Shop</a>
-            <a href="#">About</a>
+            <a href="#shop">Trending Now</a>
+            <a href="#">Track Order</a>
+            <a href="#">Support</a>
         </nav>
         <div class="cart-icon-container" id="cart-toggle">
-            <svg class="cart-svg" xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="Y1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            <svg class="cart-svg" xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
             <span id="cart-count">0</span>
         </div>
     </header>
@@ -31,35 +35,44 @@
     <!-- Main Content Area -->
     <main class="container">
         <div class="hero">
-            <h1>Curated Essentials</h1>
-            <p>High-quality objects designed for daily function and aesthetic simplicity.</p>
+            <span class="badge">AS SEEN ON TIKTOK</span>
+            <h1>Level Up Your Daily Routine</h1>
+            <p>We source the internet's most viral lifestyle gear, gadgets, and accessories. Free Worldwide Shipping included on all items.</p>
+            <a href="#shop" class="cta-scroll-btn">Explore Viral Collection</a>
         </div>
 
+        <!-- Trust Badges Section -->
+        <section class="trust-badges">
+            <div class="badge-item">📦 Free Tracked Shipping</div>
+            <div class="badge-item">🔒 Secure SSL Checkout</div>
+            <div class="badge-item">⭐ 30-Day Money-Back Guarantee</div>
+        </section>
+
         <!-- Product Grid Display -->
-        <section class="products-grid" id="products-container">
-            <!-- Products will be generated dynamically by JavaScript -->
+        <section class="products-grid" id="shop">
+            <!-- Products are generated dynamically by JavaScript with real live images -->
         </section>
     </main>
 
     <!-- Sliding Shopping Cart Drawer -->
     <div class="cart-drawer" id="cart-drawer">
         <div class="cart-header">
-            <h2>Your Cart</h2>
+            <h2>Your Shopping Cart</h2>
             <button class="close-btn" id="cart-close">&times;</button>
         </div>
         <div class="cart-body" id="cart-items-container">
-            <!-- Added items will appear here dynamically -->
+            <!-- Items inject dynamically -->
         </div>
         <div class="cart-footer">
             <div class="subtotal">
                 <span>Subtotal:</span>
                 <span id="cart-subtotal">$0.00</span>
             </div>
-            <button class="checkout-btn" onclick="alert('Proceeding to mock checkout platform!')">Checkout</button>
+            <p class="shipping-info">🎉 You qualify for **FREE SHIPPING**!</p>
+            <button class="checkout-btn" onclick="alert('Redirecting secure dropship payment portal Gateway...')">Proceed To Secure Checkout</button>
         </div>
     </div>
     
-    <!-- Cart Overlay Grid backdrop -->
     <div class="cart-overlay" id="cart-overlay"></div>
 
     <script src="script.js"></script>
