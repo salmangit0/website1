@@ -1,62 +1,36 @@
-let selectedProduct = "";
-
-function selectProduct(product){
-    selectedProduct = product;
-
-    document
-    .getElementById("orderForm")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
+function changeImage(src){
+document.getElementById("mainImage").src = src;
 }
 
-document.getElementById("orderForm")
+document
+.getElementById("orderForm")
 .addEventListener("submit",function(e){
 
 e.preventDefault();
 
-let name =
-document.getElementById("name").value;
+const phone = "917012426685";
 
-let po =
-document.getElementById("po").value;
-
-let number1 =
-document.getElementById("number1").value;
-
-let number2 =
-document.getElementById("number2").value;
-
-let landmark =
-document.getElementById("landmark").value;
-
-let address =
-document.getElementById("address").value;
-
-let message =
+const msg =
 `🛒 NEW ORDER
 
-Product: ${selectedProduct}
+Product: Wireless Earbuds Pro
 
-Name: ${name}
+Name: ${name.value}
 
-Post Office: ${po}
+Phone: ${phone.value}
 
-Mobile 1: ${number1}
+Alternative Number: ${altphone.value}
 
-Mobile 2: ${number2}
+Post Office: ${po.value}
 
-Landmark: ${landmark}
+Landmark: ${landmark.value}
 
 Address:
-${address}
+${address.value}
 `;
 
-let whatsappURL =
-`https://wa.me/917012426685?text=${encodeURIComponent(message)}`;
-
 window.open(
-whatsappURL,
+`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,
 "_blank"
 );
 
