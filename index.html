@@ -1,80 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VibeTrend | Viral Gadgets & Lifestyle</title>
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrendCart</title>
+<link rel="stylesheet" href="style.css">
+https://fonts.googleapis.com
+https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap
 </head>
 <body>
 
-    <!-- Dropshipping Scarcity Ticker Banner -->
-    <div class="promo-banner">
-        ⚡ FLASH SALE: 50% OFF ALL TRENDING ITEMS TODAY ONLY — <span id="countdown">00:14:59</span> LEFT!
-    </div>
+<div class="bg"></div>
 
-    <!-- Header Section -->
-    <header class="navbar">
-        <div class="logo">
-            <a href="#">VIBE<span>TREND</span></a>
-        </div>
-        <nav class="nav-links">
-            <a href="#shop">Trending Now</a>
-            <a href="#">Track Order</a>
-            <a href="#">Support</a>
-        </nav>
-        <div class="cart-icon-container" id="cart-toggle">
-            <svg class="cart-svg" xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-            <span id="cart-count">0</span>
-        </div>
-    </header>
+<header>
+    <h1>TrendCart</h1>
+    <p>Discover Trending Products</p>
+</header>
 
-    <!-- Main Content Area -->
-    <main class="container">
-        <div class="hero">
-            <span class="badge">AS SEEN ON TIKTOK</span>
-            <h1>Level Up Your Daily Routine</h1>
-            <p>We source the internet's most viral lifestyle gear, gadgets, and accessories. Free Worldwide Shipping included on all items.</p>
-            <a href="#shop" class="cta-scroll-btn">Explore Viral Collection</a>
+<section class="products">
+
+    <!-- Product 1 -->
+    <div class="glass-card">
+        <h2>Smart Fitness Watch</h2>
+
+        <div class="media-gallery">
+            images/watch1.jpg
+            images/watch2.jpg
+            <video controls>
+                videos/watch.mp4
+            </video>
         </div>
 
-        <!-- Trust Badges Section -->
-        <section class="trust-badges">
-            <div class="badge-item">📦 Free Tracked Shipping</div>
-            <div class="badge-item">🔒 Secure SSL Checkout</div>
-            <div class="badge-item">⭐ 30-Day Money-Back Guarantee</div>
-        </section>
+        <p>₹999</p>
 
-        <!-- Product Grid Display -->
-        <section class="products-grid" id="shop">
-            <!-- Products are generated dynamically by JavaScript with real live images -->
-        </section>
-    </main>
+        <button onclick="selectProduct('Smart Fitness Watch')">
+            Order Now
+        </button>
 
-    <!-- Sliding Shopping Cart Drawer -->
-    <div class="cart-drawer" id="cart-drawer">
-        <div class="cart-header">
-            <h2>Your Shopping Cart</h2>
-            <button class="close-btn" id="cart-close">&times;</button>
-        </div>
-        <div class="cart-body" id="cart-items-container">
-            <!-- Items inject dynamically -->
-        </div>
-        <div class="cart-footer">
-            <div class="subtotal">
-                <span>Subtotal:</span>
-                <span id="cart-subtotal">$0.00</span>
+        <div class="reviews">
+            <h3>Customer Reviews</h3>
+
+            <div class="review">
+                reviews/user1.jpg
+                <p>⭐⭐⭐⭐⭐ Amazing product!</p>
             </div>
-            <p class="shipping-info">🎉 You qualify for **FREE SHIPPING**!</p>
-            <button class="checkout-btn" onclick="alert('Redirecting secure dropship payment portal Gateway...')">Proceed To Secure Checkout</button>
+
+            <video controls>
+                reviews/reviewwatch.mp4
+            </video>
         </div>
     </div>
-    
-    <div class="cart-overlay" id="cart-overlay"></div>
 
-    <script src="script.js"></script>
+    <!-- Product 2 -->
+    <div class="glass-card">
+        <h2>Portable Blender</h2>
+
+        <div class="media-gallery">
+            images/blender1.jpg
+            images/blender2.jpg
+            <video controls>
+                videos/blender.mp4
+            </video>
+        </div>
+
+        <p>₹799</p>
+
+        <button onclick="selectProduct('Portable Blender')">
+            Order Now
+        </button>
+
+        <div class="reviews">
+            <h3>Customer Reviews</h3>
+
+            <div class="review">
+                reviews/user2.jpg
+                <p>⭐⭐⭐⭐⭐ Very useful everyday.</p>
+            </div>
+
+            <video controls>
+                reviews/reviewblender.mp4
+            </video>
+        </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="glass-card">
+        <h2>Wireless Earbuds</h2>
+
+        <div class="media-gallery">
+            images/earbud1.jpg
+            images/earbud2.jpg
+            <video controls>
+                videos/earbuds.mp4
+            </video>
+        </div>
+
+        <p>₹1299</p>
+
+        <button onclick="selectProduct('Wireless Earbuds')">
+            Order Now
+        </button>
+
+        <div class="reviews">
+            <h3>Customer Reviews</h3>
+
+            <div class="review">
+                reviews/user3.jpg
+                <p>⭐⭐⭐⭐⭐ Excellent sound quality.</p>
+            </div>
+
+            <video controls>
+                reviews/reviewearbuds.mp4
+            </video>
+        </div>
+    </div>
+
+</section>
+
+<section class="glass-form">
+
+    <h2>Place Your Order</h2>
+
+    <form id="orderForm">
+
+        <input type="text" id="name" placeholder="Full Name" required>
+
+        <input type="text" id="po" placeholder="Post Office" required>
+
+        <input type="text" id="number1" placeholder="Primary Number" required>
+
+        <input type="text" id="number2" placeholder="Secondary Number">
+
+        <input type="text" id="landmark" placeholder="Landmark">
+
+        <textarea id="address"
+        placeholder="Full Address"
+        required></textarea>
+
+        <button type="submit">
+            Send Order on WhatsApp
+        </button>
+
+    </form>
+
+</section>
+
+<script src="script.js"></script>
+
 </body>
 </html>
