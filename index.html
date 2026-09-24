@@ -1,147 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
 <title>TrendCart</title>
-<link rel="stylesheet" href="style.css">
+
 https://fonts.googleapis.com
-https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap
-</head>
-<body>
 
-<div class="bg"></div>
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
 
-<header>
-    <h1>TrendCart</h1>
-    <p>Discover Trending Products</p>
-</header>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
 
-<section class="products">
+<link rel="stylesheet>
+<div class="logo">
+TrendCart
+</div>
 
-    <!-- Product 1 -->
-    <div class="glass-card">
-        <h2>Smart Fitness Watch</h2>
+<button class="nav-btn">
+Buy Now
+</button>
+</nav>
 
-        <div class="media-gallery">
-            images/watch1.jpg
-            images/watch2.jpg
-            <video controls>
-                videos/watch.mp4
-            </video>
-        </div>
+<section class="hero">
 
-        <p>₹999</p>
+<div class="hero-content">
 
-        <button onclick="selectProduct('Smart Fitness Watch')">
-            Order Now
-        </button>
+<span class="badge">
+🔥 Trending Product
+</span>
 
-        <div class="reviews">
-            <h3>Customer Reviews</h3>
+<h1>
+Wireless Earbuds Pro
+</h1>
 
-            <div class="review">
-                reviews/user1.jpg
-                <p>⭐⭐⭐⭐⭐ Amazing product!</p>
-            </div>
+<p>
+Premium Sound Quality,
+40 Hours Battery Life,
+Fast Charging Technology
+</p>
 
-            <video controls>
-                reviews/reviewwatch.mp4
-            </video>
-        </div>
-    </div>
+<div class="price">
 
-    <!-- Product 2 -->
-    <div class="glass-card">
-        <h2>Portable Blender</h2>
+<span class="old">
+₹2999
+</span>
 
-        <div class="media-gallery">
-            images/blender1.jpg
-            images/blender2.jpg
-            <video controls>
-                videos/blender.mp4
-            </video>
-        </div>
+<span class="new">
+₹1299
+</span>
 
-        <p>₹799</p>
+</div>
 
-        <button onclick="selectProduct('Portable Blender')">
-            Order Now
-        </button>
+<button class="buy-btn"
+onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">
+Order Now
+</button>
 
-        <div class="reviews">
-            <h3>Customer Reviews</h3>
+</div>
 
-            <div class="review">
-                reviews/user2.jpg
-                <p>⭐⭐⭐⭐⭐ Very useful everyday.</p>
-            </div>
+<div class="hero-image">
 
-            <video controls>
-                reviews/reviewblender.mp4
-            </video>
-        </div>
-    </div>
+<img id="mainImage"
+src="images/product1.jpg">
 
-    <!-- Product 3 -->
-    <div class="glass-card">
-        <h2>Wireless Earbuds</h2>
-
-        <div class="media-gallery">
-            images/earbud1.jpg
-            images/earbud2.jpg
-            <video controls>
-                videos/earbuds.mp4
-            </video>
-        </div>
-
-        <p>₹1299</p>
-
-        <button onclick="selectProduct('Wireless Earbuds')">
-            Order Now
-        </button>
-
-        <div class="reviews">
-            <h3>Customer Reviews</h3>
-
-            <div class="review">
-                reviews/user3.jpg
-                <p>⭐⭐⭐⭐⭐ Excellent sound quality.</p>
-            </div>
-
-            <video controls>
-                reviews/reviewearbuds.mp4
-            </video>
-        </div>
-    </div>
+</div>
 
 </section>
 
-<section class="glass-form">
+<sectionuct Gallery</h2>
 
-    <h2>Place Your Order</h2>
+<div class="thumbs">
 
-    <form id="orderForm">
+<img src="images/product1.jpg"
+onclick="changet2.jpg"
+onclick="product3.jpg"
+onclick="changeImage(this.src)">
 
-        <input type="text" id="name" placeholder="Full Name" required>
+</div>
 
-        <input type="text" id="po" placeholder="Post Office" required>
+</sectionoduct Demonstration</h2>
 
-        <input type="text" id="number1" placeholder="Primary Number" required>
+<video controls>
+<source src.mp4
+</video>
 
-        <input type="text" id="number2" placeholder="Secondary Number">
+</section>
 
-        <input type="text" id="landmark" placeholder="Landmark">
+<section class="features">
 
-        <textarea id="address"
-        placeholder="Full Address"
-        required></textarea>
+<div class="feature">
+✅ Premium Sound
+</div>
 
-        <button type="submit">
-            Send Order on WhatsApp
-        </button>
+<div class="feature">
+✅ 40 Hour Battery
+</div>
 
-    </form>
+<div class="feature">
+✅ Touch Controls
+</div>
+
+<div class="feature">
+✅ Quick Charging
+</div>
+
+</section>
+
+<section class="reviews">
+
+<h2>Customer Reviews</h2>
+
+<div class="review-grid">
+
+<div class="review-card">
+reviews/r1.jpg
+<h3>Arjun</h3>
+<p>⭐⭐⭐⭐⭐ Amazing quality.</p>
+</div>
+
+<div class="review-card">
+<imgews/r2.jpg
+<h3>Rahul</h3>
+<p>⭐⭐⭐⭐⭐ Worth every rupee.</p>
+</div>
+
+<div class="review-card">
+reviews/r3.jpg
+<h3>Vishnu</h3>
+<p>⭐⭐⭐⭐⭐ Battery life is insane.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="order" class="order-section">
+
+<h2>Complete Your Order</h2>
+
+<form id="orderForm">
+
+<input
+type="text"
+id="name"
+placeholder="Full Name"
+required>
+
+<input
+type="text"
+id="phone"
+placeholder="Phone Number"
+required>
+
+<input
+type="text"
+id="altphone"
+placeholder="Alternative Number">
+
+<input
+type="text"
+id="po"
+placeholder="Post Office">
+
+<input
+type="text"
+id="landmark"
+placeholder="Landmark">
+
+<textarea
+id="address"
+placeholder="Full Address"
+required></textarea>
+
+<button type="submit">
+Place Order On WhatsApp
+</button>
+
+</form>
 
 </section>
 
